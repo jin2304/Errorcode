@@ -90,7 +90,7 @@ public class SearchWebService {
 //	
 	
 	
-	//�����Լ�	
+	
 	public List<Searchweb> getSearchwebList(String query){
 		
 		List<Searchweb> list = new ArrayList<>();
@@ -109,8 +109,8 @@ public class SearchWebService {
 
 		try {
 			
-						
-			Class.forName("com.mysql.cj.jdbc.Driver");	
+			Class.forName("org.mariadb.jdbc.Driver");				
+			//Class.forName("com.mysql.cj.jdbc.Driver");	
 			Connection conn = DatabaseUtil2.getConnection();
 			PreparedStatement st = conn.prepareStatement(sql);
 			
@@ -182,7 +182,8 @@ public List<Searchweb> getSearchweb(String value,String home) {
 	String sql = "SELECT * FROM main WHERE value=? OR home=? ORDER BY ID"; 
 	
 			try {
-				Class.forName("com.mysql.cj.jdbc.Driver");	
+			    Class.forName("org.mariadb.jdbc.Driver");
+				//Class.forName("com.mysql.cj.jdbc.Driver");	
 
 				Connection conn = DatabaseUtil2.getConnection();
 				PreparedStatement st = conn.prepareStatement(sql);

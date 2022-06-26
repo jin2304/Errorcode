@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+
+.navbar {			
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+			background-color:black; 
+			/* #263343; */
+			/* height:80px; */
+			padding: 8px 12px;
+			box-sizing:border-box;			
+		}
+		
+		
+		.search_logo{			
+			vertical-align:top;
+			width:40px;
+			height:40px;		
+		}
+	
+	
+		.navbar_logo a{	
+			font-size:2em;
+			/* font-size:2.500em; */
+			text-decoration:none;
+			color:var(--text-color);
+		}
+		
+		
+		
+		/* 
+		.navbar_menu {
+			
+			display:flex;
+			list-style:none;
+				
+		}
+		
+		.navbar_menu a{
+			
+			font-size:16px;
+			text-decoration:none;
+			color:var(--text-color);
+			padding:8px 12px;
+			
+		}
+		
+		.navbar_menu a:hover{
+			
+			background-color:gray;
+			border-radius:8px;
+		}
+
+		
+		.navbar_toogleBtn{
+			display:none;
+			position:absolute;
+			right:12px;
+			font-size:24px;
+			color:var(--text-color);
+		} */
+		

@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+ /* 1025 <= screen <= 1200px; */
+		@media screen  and (min-width: 1025px) and (max-width: 1200px){
+			
+			:root{font-size:16px;}
+			
+	
+			/* .navbar_menu{
+				display:none;
+				flex-direction:column;
+				align-items:center;
+				width:100%;
+				padding-left:0px;
+			}
+			
+			
+			.navbar_menu li{
+			
+				margin:8px;
+		    }
+			
+			
+			.navbar_menu a:hover{
+			
+				background-color:gray;
+				border-radius:8px;
+				width:100%;
+				text-align:center;
+			
+		    }
+			
+			
+			.navbar_toogleBtn{
+			
+		    	display:block;
+			}
+			
+			.navbar_menu.active{
+				display:flex;
+			}
+			 */
+			
+			
+			/* !title */
+			
+			.titlewrap>.title{
+			font-size:5rem;
+			color:var(--text-color);
+			text-align:center;
+			/* padding-top:50px; */
+			/* padding-bottom:50px; */
+			/* background-color:#021859; */
+		}
+		
+		.title>a{
+				color:red;
+				text-decoration:none;
+		}
+		
+		.searchbar{
+			text-align:center;
+			margin-top:1.25rem; 
+			margin-bottom:1.25rem;
+		}
+		
+		
+		input[class="searchbar"] {
+			
+			width:37.500rem;
+			height:3.750rem;
+			border-radius:24px;		
+			box-sizing:border-box;
+	    }
+			
+			
+			
+			
+			/* main */
+			
+		.wrap{	
+			width:1040px;
+			display:flex;
+			flex-wrap:wrap;
+			margin:0 auto;
+			margin-top:20px; 
+			
+		}
+
+		.wrap>.wrapitems{
+			/* background-color: rgba( 255, 255, 255, 0.5 ); */
+			background-color:rgba(255,255,255,0.15);
+			/* 배경만 투명하게설정 */
+			border:2px solid rgba(255,255,255,0.8);
+			border-radius:16px;			
+			width:8rem;
+			height:8rem;
+			margin:2.5rem;
+			margin-top:3.375rem;		
+			text-align:center;
+			text-decoration:none;
+			transition:all 0.5s;
+			/* background: rgba(255,255,255,0.15); */
+		} 
+
+/* a => inline 요소 */
+		.wrap>.wrapitems>h2{
+			margin-top:0.125rem;
+			font-size:1em;
+			color:white;
+		  /* var(--text-color); */	
+		} 
+
+	    .wrap>a>img{
+			width:3rem;
+			margin-top:1.875em;		
+		} 
+
+		.wrapitems:hover{
+			
+		background:gray;
+		border:2px solid rgba(255,255,255,0.5);
+		transform: scale(1.1);
+		/* opacity: 1; */
+		}
+		
+		
+		
+	.desc{
+	display:none;
+	margin-top: 30px;
+	margin-left:-55px;
+    font-size: 12px;
+    text-align:cetner;
+    width: 220px;
+    height:50px;
+    font-style:italic; 
+}
+		
+	@media (orientation: portrait) {
+	/* 세로 Portrait 모드일 때 적용할 CSS */
+	.side{
+	position:absolute;
+	/* height:100%; */
+		
+	}
+	
+	
+	.sidebar{
+	 
+	position:fixed;
+	width:225px; 
+	background:white;
+	color:black;
+	top:0px;
+	left:-25rem;
+	z-index:1;
+	transition:all .35s;
+	height:100vh;
+    }
+
+	
+	.sidebar div{
+			 height:8.65rem;
+			 color:white;
+			 font-size:18px;
+		     /* font-size:1.500rem; */
+			 line-height:7.188rem;
+			}
+
+	.sidebar div h2{
+	text-align:right;
+	margin-right:5px;
+	
+    }
+    
+    
+    
+		
+	
+}
+
+
+
+		
+	/* @media (orientation: landscape) {
+	가로 Landscape 모드일 때 적용할 CSS
+	.side{
+	position:absolute;
+	height:100%;
+		
+	}
+
+
+.sidebar{
+	 
+	position:fixed;
+	width:225px;
+	background:white;
+	color:black;
+	top:0px;
+	left:-25rem;
+	z-index:1;
+	transition:all .35s;
+	height:100vh;
+	
+}
+
+.sidebar div{
+			 height:14.3vh;		
+			 color:white;
+		     font-size:1.500rem;
+			 line-height:7.188rem;
+			}
+
+	.sidebar div h2{
+	padding-left:170px;
+	
+    } */
+
+		
+	
+}
+			
+			
+		
+			

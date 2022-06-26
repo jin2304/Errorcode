@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+
+		:root{
+			--text-color:white;
+				/* #f0f4f5; */
+			--background-color:#181818;
+			    /* #121212; */
+				/* whitesmoke; */
+				/* #191919; */
+			/* --accent-color: */	
+		}
+
+		*{
+		margin:0;
+		padding:0;
+		}
+
+		body{
+			
+			height:50%;
+			background-image: url('');
+			background-repeat : no-repeat;
+			background-size : cover;		
+			margin:0;
+			/* background-color: */
+			background-color:var(--background-color);
+			/* font: 17px/1.4 "orbitron";  */
+			
+			
+		}
+			
+/* .mainwrap>video{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	position:fixed;
+	opacity:0.5;
+	z-index:-1;   배경을 뒤로 보내기
+	
+} */
+
+ .mainwrap{
+	height: auto;
+	padding-bottom:250px;
+	min-height: 100%;
+} 
+		
+.wrap{	
+	
+	width:1125px; 
+	display:flex;
+	flex-wrap:wrap;
+	margin:0 auto;
+	margin-top:20px; 
+	
+}
+
+.wrap>.wrapitems{
+	/* background-color: rgba( 255, 255, 255, 0.5 ); */
+	background-color:rgba(255,255,255,0.15);
+	/* 배경만 투명하게설정 */
+	border:2px solid rgba(255,255,255,0.8);
+	border-radius:16px;
+	box-sizing:border-box;
+	width:145px;
+	height:145px;
+	/* width:7.5rem;
+	height:7.5rem; */
+	margin:40px;
+	/* margin:2.5rem; */
+	margin-top:70px;
+	margin-top:4.375rem;
+	text-align:center;
+	transition:all 0.5s;
+	/* background: rgba(255,255,255,0.15); */
+} 
+
+/* a => inline 요소 */
+.wrap>.wrapitems>h2{
+	margin-top:8px;
+	font-size:20px;	
+	/* 1em; */
+  
+} 
+
+.desc{
+	display:none;
+	margin-top: 40px;
+	margin-left:-40px;
+    font-size: 12px;
+    text-align:cetner;
+    width: 220px;
+    height:50px;
+    font-style:italic;
+ 
+}
+
+
+.wrapitems:hover .desc{display:block;animation:descmove 1s linear normal;}
+
+		@keyframes descmove{		
+			0%   {left:-100px;opacity:0.8;}
+			100% {left:0px;opacity:1;}
+
+		}
+
+/* .wrapitems:hover .desc{
+	display:block;
+} */
+
+
+.wrap>a{
+	text-decoration:none;
+	color:white;
+	/*  var(--text-color);	 */
+}
+
+.wrap>a>img{
+	width:42px;
+	/* width:3rem; */
+	margin-top:36px;
+	/* margin-top:1.875em;	 */	
+} 
+
+.wrapitems:hover{
+			
+		background:gray;
+		border:2px solid rgba(255,255,255,0.5);
+		transform: scale(1.1);
+		/* opacity: 1; */
+		}
+
+
+
+	
