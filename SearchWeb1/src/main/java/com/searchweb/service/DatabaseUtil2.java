@@ -14,7 +14,7 @@ public static Connection getConnection() {
 			
 			String dbURL = "jdbc:mysql://localhost/searchweb";	 				
 			String dbID = "searchweb"; //카페24아이디
-			String dbPassword = "ss04912304!!"; //카페24db비번
+			String dbPassword = "*****"; //카페24db비번
 			
 //			String dbURL = "jdbc:mysql://searchweb.cafe24.com:3306/searchweb";					
 //			String dbID = "jin";
