@@ -7,13 +7,7 @@ public class DatabaseUtil2 {
 	
 public static Connection getConnection() {
 				
-		try {
-			/*
-			 * String dbURL = "jdbc:mariadb://localhost/searchweb"; 
-			 * String dbID = "searchweb";
-			 * String dbPassword = "ss04912304!!";
-			 */
-			//String dbURL = "jdbc:mariadb://localhost:3306/searchweb";
+		try {						
 			String dbURL = "jdbc:mariadb://searchweb.cafe24.com:3306/searchweb";					
 			String dbID = "searchweb";
 			String dbPassword = "ss04912304!!";
