@@ -24,10 +24,7 @@ public class SearchWebService {
 		
 		
 		String sql = "SELECT * FROM main WHERE NAME LIKE UPPER(?) OR NAME LIKE LOWER(?) OR NAME2 LIKE ? ";
-				
-		// 1, 11, 21, 31 -> an = a1+(n-1)*d -> 1+(page-1)*10
-		//10, 20, 30, 40 -> page*10
-		
+						
 
 		try { 
 			Class.forName("org.mariadb.jdbc.Driver");
