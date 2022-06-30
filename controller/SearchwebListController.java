@@ -30,20 +30,19 @@ public class SearchwebListController extends HttpServlet{
 		
 		
 		
-//		String field = request.getParameter("f");
+
 		String query_ = request.getParameter("q");
 		
 		
-		String query = "";  //�⺻��
+		String query = ""; 
 		if(query_ != null)
 			query = query_;
 		
 		
 		SearchWebService service = new SearchWebService();
 		List<Searchweb> list = service.getSearchwebList(query);
-		//List<Searchweb> list2 = service.getSearch(query,1);
 		request.setAttribute("list", list);
-		//request.setAttribute("list2", list2);
+		
 		
 		//forward
 		request
