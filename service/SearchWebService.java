@@ -13,84 +13,10 @@ import com.searchweb.entity.Searchweb;
 
 public class SearchWebService {
 
-	/*
-	 * public List<Searchweb> getSearchwebList(){
-	 * 
-	 * return getSearchwebList("",1); }
-	 * 
-	 * 
-	 * 
-	 * public List<Searchweb> getSearchwebList(int page){
-	 * 
-	 * return getSearchwebList("",""); }
-	 */
-	
-	//�˻��Լ�
+
 	
 	
-//	public List<Searchweb> getSearchwebListh(String query,int page){
-//		
-//		List<Searchweb> list = new ArrayList<>();
-//		
-//		String sql = "SELECT * FROM main WHERE name LIKE ? ORDER BY HIT DESC";
-//				
-//		// 1, 11, 21, 31 -> an = a1+(n-1)*d -> 1+(page-1)*10
-//		//10, 20, 30, 40 -> page*10
-//
-//
-//		try {
-//			
-//			Class.forName("com.mysql.cj.jdbc.Driver");	
-//			Connection conn = DatabaseUtil2.getConnection();
-//			PreparedStatement st = conn.prepareStatement(sql);
-//
-//			st.setString(1,"%"+query+"%");
-//		   //st.setString(2,"%"+query+"%");
-//		  //st.setInt(3, 1+(page-1)*10);
-//		  //st.setInt(4, page*10);
-//			ResultSet rs = st.executeQuery();
-//			
-//
-//			 while(rs.next()){ 
-//				  int id = rs.getInt("id");
-//				  String name = rs.getString("name");
-//				  String content = rs.getString("content");
-//				  String weburl = rs.getString("weburl");
-//				  String value = rs.getString("value");	
-//				  String home = rs.getString("home");
-//				  int hit = rs.getInt("hit");
-//				  Searchweb searchweb = new Searchweb(
-//						   id,						  
-//						   name,
-//						   content,
-//						   weburl,
-//						   value,
-//						   home,
-//						   hit
-//						  );
-//				  
-//				  list.add(searchweb);
-//			   }
-//			 
-//				rs.close();
-//				st.close(); 
-//				conn.close();
-//			} catch (ClassNotFoundException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			} catch (SQLException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		
-//		
-//		return list;
-//	}
-//
-//	
-	
-	
-	//�����Լ�	
+	//List	
 	public List<Searchweb> getSearchwebList(String query){
 		
 		List<Searchweb> list = new ArrayList<>();
@@ -98,14 +24,10 @@ public class SearchWebService {
 		
 		
 		String sql = "SELECT * FROM main WHERE NAME LIKE UPPER(?) OR NAME LIKE LOWER(?) OR NAME2 LIKE ? ";
-//		String sql = "SELECT * FROM( SELECT ROWNUM NUM, M.*FROM (SELECT * FROM MAIN WHERE NAME LIKE UPPER(?) OR NAME LIKE LOWER(?) ORDER BY HIT DESC) M) "
-//				+ "WHERE NUM BETWEEN ? AND ?";
 				
 		// 1, 11, 21, 31 -> an = a1+(n-1)*d -> 1+(page-1)*10
 		//10, 20, 30, 40 -> page*10
 		
-//		String url = "jdbc:mysql://localhost:3306/TEST";
-//		String url = "jdbc:oracle:thin:@localhost:1521/xepdb1";
 
 		try { 
 			Class.forName("org.mariadb.jdbc.Driver");
@@ -115,17 +37,11 @@ public class SearchWebService {
 							
 			Connection conn = DatabaseUtil2.getConnection();
 			PreparedStatement st = conn.prepareStatement(sql);			
-//			PreparedStatement st = con.prepareStatement(sql);
 			
 			st.setString(1,"%"+query+"%");
 			st.setString(2,"%"+query+"%");
 			st.setString(3,"%"+query+"%");
-			/* st.setString(4,"hit"); */
-//			st.setString(1,"%"+query+"%");
-//			st.setString(1,"%"+query+"%");
-//			st.setString(2,"%"+query+"%");
-//			st.setInt(3, 1+(page-1)*10);
-//			st.setInt(4, page*10);
+			
 			ResultSet rs = st.executeQuery();
 			
 			 while(rs.next()){ 
@@ -173,13 +89,12 @@ public class SearchWebService {
 	
 	
 
-//detail�Լ�
+//detail
 public List<Searchweb> getSearchweb(String value,String home) {
 	
 	List<Searchweb> list = new ArrayList<>();
-	/* Searchweb searchweb = null; */
 	
-	
+		
 	String sql = "SELECT * FROM main WHERE value=? OR home=? ORDER BY ID"; 
 	
 			try {
@@ -194,11 +109,6 @@ public List<Searchweb> getSearchweb(String value,String home) {
 				
 				st.setString(1,value);
 				st.setString(2,home);
-//				st.setString(1,"%"+query+"%");
-//				st.setString(1,"%"+query+"%");
-//				st.setString(2,"%"+query+"%");
-//				st.setInt(3, 1+(page-1)*10);
-//				st.setInt(4, page*10);
 				ResultSet rs = st.executeQuery();
 				
 
@@ -244,11 +154,6 @@ public List<Searchweb> getSearchweb(String value,String home) {
 
 
 
-
-
-
-
-
 public List<Searchweb> getSearchweb(String value) {
 	// TODO Auto-generated method stub
 	return null;
@@ -256,57 +161,5 @@ public List<Searchweb> getSearchweb(String value) {
 
 
 }
-//	public int getSearchwebCount() {
-//		
-//		return 0;
-//	}
-//	
-//	
-//
-//	
-//	public int getSearchwebCount(String field, String query){
-//		
-//		int count = 0;
-//		
-//String sql = "SELECT * FROM test.main";	
-//
-//String sql = "SELECT COUNT(ID) COUNT FROM( SELECT ROWNUM NUM, M.*FROM (SELECT * FROM main WHERE "+field+" LIKE ? ORDER BY HIT DESC) M) ";
-//		
-//		
-//		try {
-//			Class.forName("com.mysql.cj.jdbc.Driver");	
-//
-//			
-//			Connection conn = DatabaseUtil2.getConnection();
-//			PreparedStatement st = conn.prepareStatement(sql);
-//
-//			st.setString(1,"%"+query+"%");
-//		
-//			ResultSet rs = st.executeQuery();
-//			
-//			count = rs.getInt("count");
-//	  
-//			rs.close();
-//			st.close(); 
-//			conn.close();
-//		} catch (ClassNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		
-//		
-//		
-//		return count;
-//	}
-//	
-//	
-	
-
-	
-	
 
 	
